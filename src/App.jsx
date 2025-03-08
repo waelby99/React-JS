@@ -5,6 +5,7 @@ import {use, useState} from "react";
 import Timer from "./components/Timer.jsx";
 import DataFetcher from "./components/DataFetcher.jsx";
 import Counter from "./components/Counter.jsx";
+import TodoList from "./components/TodoList.jsx";
 
 const users=[
     {name:"Wael", age:25},
@@ -28,8 +29,9 @@ function App() {
                   onClick={()=>setIsOn(!isOn)}> {isOn ? 'On':'Off'} </button>
 
           <Timer />
-          <DataFetcher />*/}
-          <Counter />
+          <DataFetcher />
+          <Counter />*/}
+          <TodoList />
       </div>
 
   )
