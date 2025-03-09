@@ -8,6 +8,8 @@ import Counter from "./components/Counter.jsx";
 import TodoList from "./components/TodoList.jsx";
 import Content from "./components/Content.jsx";
 import Head from "./components/Head.jsx";
+import InputWithFocus from "./components/InputWithFocus.jsx";
+import CompteurRendu from "./components/CompteurRendu.jsx";
 
 const users=[
     {name:"Wael", age:25},
@@ -39,7 +41,9 @@ function App() {
           <ThemeContext.Provider value={{ theme, setTheme }}>
               <Head />
               <Content />
-          </ThemeContext.Provider>*/}
+          </ThemeContext.Provider>
+          <InputWithFocus />*/}
+          <CompteurRendu />
       </div>
 
   )
