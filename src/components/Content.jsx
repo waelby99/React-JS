@@ -1,4 +1,5 @@
 import {useContext} from "react";
+import {ThemeContext} from "../App.jsx";
 
 function Content() {
     const { theme } = useContext(ThemeContext);

@@ -1,4 +1,5 @@
-import {useContext} from "react";
+import React, {useContext} from "react";
+import {ThemeContext} from "../App.jsx";
 
 function Head() {
     const { theme, setTheme } = useContext(ThemeContext);
