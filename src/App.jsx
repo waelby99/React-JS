@@ -30,8 +30,8 @@ function App() {
 
           <Timer />
           <DataFetcher />
-          <Counter />*/}
-          <TodoList />
+          <Counter />
+          <TodoList />*/}
       </div>
 
   )
