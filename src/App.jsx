@@ -22,6 +22,9 @@ import Dashboard from "./components/Dashboard.jsx";
 import Details from "./components/Details.jsx";
 import CartProvider from "./components/CartContext.jsx";
 import Cart from "./components/Cart.jsx";
+import store from "./components/store.js";
+import {Provider} from "react-redux";
+import Navbar from "./components/Navbar.jsx";
 
 /*const users=[
     {name:"Wael", age:25},
@@ -74,12 +77,17 @@ function App() {
         <Route path="/details/:id" element={<Details />} />
 
     </Routes>
-</Router>*/}
+</Router>
           <CartProvider>
               <Header/>
                 <Dashboard/>
             <Cart/>
-          </CartProvider>
+          </CartProvider>*/}
+          <Provider store={store}>
+              <Navbar />
+              <Dashboard />
+              <Cart />
+          </Provider>
       </div>
 
   )

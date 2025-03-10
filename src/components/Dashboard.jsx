@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import {useContext} from "react";
 import {CartContext} from "./CartContext.jsx";
+import {useDispatch} from "react-redux";
+import {addToCart} from "../actions/actions.js";
 
 const produits = [
     { id: 1, titre: "Produit 1" },
@@ -9,21 +11,33 @@ const produits = [
 ];
 
 function Dashboard() {
-    const {addToCart}=useContext(CartContext)
+    //contextAPI
+    //const {addToCart}=useContext(CartContext)
+    const dispatch = useDispatch();
     return (
         <div>
-            <h1>Liste des Produits</h1>
+            {/*context api <h1>Liste des Produits</h1>
             <ul>
                 {produits.map((produit) => (
                     <li key={produit.id}>
                         <h2>{produit.titre}</h2>
                         <button onClick={() => addToCart(produit)}>Add to Cart</button>
-                        {/*<Link to={`/details/${produit.id}`}>
+                        <Link to={`/details/${produit.id}`}>
                             <button>Details</button>
-                        </Link>*/}
+                        </Link>
+                    </li>
+                ))}
+            </ul>*/}
+            <h2>Products</h2>
+            <ul>
+                {produits.map((produit) => (
+                    <li key={produit.id}>
+                        {produit.titre}
+                        <button onClick={() => dispatch(addToCart(produit))}>Add to Cart</button>
                     </li>
                 ))}
             </ul>
+
         </div>
     );
 }
