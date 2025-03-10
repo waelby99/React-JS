@@ -20,6 +20,8 @@ import Home from "./components/Home.jsx";
 import About from "./components/About.jsx";
 import Dashboard from "./components/Dashboard.jsx";
 import Details from "./components/Details.jsx";
+import CartProvider from "./components/CartContext.jsx";
+import Cart from "./components/Cart.jsx";
 
 /*const users=[
     {name:"Wael", age:25},
@@ -57,7 +59,7 @@ function App() {
           <WithUseMemo />
           <FilteredList/>
           <EventHandler/>
-          <InteractiveList />*/}
+          <InteractiveList />
 <Router>
     <nav>
         <Link to="/">Home</Link>
@@ -72,7 +74,12 @@ function App() {
         <Route path="/details/:id" element={<Details />} />
 
     </Routes>
-</Router>
+</Router>*/}
+          <CartProvider>
+              <Header/>
+                <Dashboard/>
+            <Cart/>
+          </CartProvider>
       </div>
 
   )

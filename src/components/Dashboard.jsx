@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import {useContext} from "react";
+import {CartContext} from "./CartContext.jsx";
 
 const produits = [
     { id: 1, titre: "Produit 1" },
@@ -7,6 +9,7 @@ const produits = [
 ];
 
 function Dashboard() {
+    const {addToCart}=useContext(CartContext)
     return (
         <div>
             <h1>Liste des Produits</h1>
@@ -14,9 +17,10 @@ function Dashboard() {
                 {produits.map((produit) => (
                     <li key={produit.id}>
                         <h2>{produit.titre}</h2>
-                        <Link to={`/details/${produit.id}`}>
+                        <button onClick={() => addToCart(produit)}>Add to Cart</button>
+                        {/*<Link to={`/details/${produit.id}`}>
                             <button>Details</button>
-                        </Link>
+                        </Link>*/}
                     </li>
                 ))}
             </ul>
