@@ -14,18 +14,24 @@ import WithUseMemo from "./components/WithUseMemo.jsx";
 import FilteredList from "./components/FilteredList.jsx";
 import EventHandler from "./components/EventHandler.jsx";
 import InteractiveList from "./components/InteractiveList.jsx";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import Login from "./components/Login.jsx";
+import Home from "./components/Home.jsx";
+import About from "./components/About.jsx";
+import Dashboard from "./components/Dashboard.jsx";
+import Details from "./components/Details.jsx";
 
-const users=[
+/*const users=[
     {name:"Wael", age:25},
     {name:"Haithoum",age:26},
     {name:"Yasmine",age:24}
-]
+]*/
 export const ThemeContext = React.createContext();
 
 function App() {
-    const [count,setCount]= useState(0);
+    /*const [count,setCount]= useState(0);
     const [isOn,setIsOn] = useState(false);
-    const [theme, setTheme] = useState('light');
+    const [theme, setTheme] = useState('light');*/
   return (
       <div>
           {/* <Welcome name="renekton"/><Header /><Welcome name="yorick"/>
@@ -50,8 +56,23 @@ function App() {
           <CompteurRendu />
           <WithUseMemo />
           <FilteredList/>
-          <EventHandler/>*/}
-          <InteractiveList />
+          <EventHandler/>
+          <InteractiveList />*/}
+<Router>
+    <nav>
+        <Link to="/">Home</Link>
+        <Link to="/about">About</Link>
+        <Link to="/login">Login</Link>
+    </nav>
+    <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/details/:id" element={<Details />} />
+
+    </Routes>
+</Router>
       </div>
 
   )
