@@ -10,6 +10,8 @@ import Content from "./components/Content.jsx";
 import Head from "./components/Head.jsx";
 import InputWithFocus from "./components/InputWithFocus.jsx";
 import CompteurRendu from "./components/CompteurRendu.jsx";
+import WithUseMemo from "./components/WithUseMemo.jsx";
+import FilteredList from "./components/FilteredList.jsx";
 
 const users=[
     {name:"Wael", age:25},
@@ -42,8 +44,10 @@ function App() {
               <Head />
               <Content />
           </ThemeContext.Provider>
-          <InputWithFocus />*/}
+          <InputWithFocus />
           <CompteurRendu />
+          <WithUseMemo />*/}
+          <FilteredList/>
       </div>
 
   )
