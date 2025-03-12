@@ -25,6 +25,8 @@ import Cart from "./components/Cart.jsx";
 import store from "./components/store.js";
 import {Provider} from "react-redux";
 import Navbar from "./components/Navbar.jsx";
+import DataFetching from "./components/DataFetching.jsx";
+import StyledButton from "./components/StyledButton.jsx";
 
 /*const users=[
     {name:"Wael", age:25},
@@ -82,12 +84,15 @@ function App() {
               <Header/>
                 <Dashboard/>
             <Cart/>
-          </CartProvider>*/}
+          </CartProvider>
           <Provider store={store}>
               <Navbar />
               <Dashboard />
               <Cart />
           </Provider>
+
+          <StyledButton />*/}
+          <DataFetching/>
       </div>
 
   )
