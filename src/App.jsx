@@ -27,6 +27,10 @@ import {Provider} from "react-redux";
 import Navbar from "./components/Navbar.jsx";
 import DataFetching from "./components/DataFetching.jsx";
 import StyledButton from "./components/StyledButton.jsx";
+import LoginForm from "./components/LoginForm.jsx";
+import LoginFormHook from "./components/LoginFormHook.jsx";
+import TaskList from "./components/TaskList.jsx";
+import TaskForm from "./components/TaskForm.jsx";
 
 /*const users=[
     {name:"Wael", age:25},
@@ -91,8 +95,13 @@ function App() {
               <Cart />
           </Provider>
 
-          <StyledButton />*/}
+          <StyledButton />
           <DataFetching/>
+          <LoginForm />
+          <LoginFormHook/>*/}
+          <h1>Task Manager</h1>
+          <TaskForm />
+          <TaskList />
       </div>
 
   )
